@@ -118,7 +118,7 @@ const HighTemperature = () => {
                     }
                 })}
             </div>
-            <Sun height={400} className='absolute -left-32 -top-32' />
+            <Sun height={400} className='rotating absolute -left-32 -top-32' />
 
             <Landx
                 width={1920}
