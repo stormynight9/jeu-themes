@@ -54,13 +54,18 @@ const HighTemperature = () => {
         setAverageTemperature(interpolate(percentage))
     }, [percentage])
 
-    console.log(averateTemperature)
-
     useEffect(() => {
         setPercentage((values[0] - 1850) / 2)
     }, [values])
     return (
         <div className='relative  h-full overflow-hidden bg-gradient-to-b from-sky-600 to-[#b6fdff]'>
+            <div
+                className='absolute rounded-full bg-yellow-400  opacity-25 blur-3xl'
+                style={{
+                    width: `${percentage * 4}px`,
+                    height: `${percentage * 4}px`,
+                }}
+            />
             <Range
                 step={1}
                 min={1850}
@@ -118,12 +123,12 @@ const HighTemperature = () => {
             <Landx
                 width={1920}
                 className='absolute bottom-0 '
-                seaPosition={-percentage / 4}
+                seaPosition={(-percentage * 1.1) / 4}
             />
             <Land
                 width={1920}
                 className='absolute bottom-0 z-10'
-                seaPosition={-percentage / 4}
+                seaPosition={(-percentage * 1.1) / 4}
                 style={{
                     opacity: 1 - percentage / 100,
                 }}
