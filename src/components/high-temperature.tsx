@@ -75,7 +75,7 @@ const HighTemperature = () => {
                 renderTrack={({ props, children }) => (
                     <div
                         {...props}
-                        className='relative mx-auto mt-8 h-4 w-full max-w-5xl rounded-full bg-gradient-to-r from-green-500 via-yellow-500 to-red-600'
+                        className='relative mx-auto mt-8 h-4 w-full max-w-4xl rounded-full bg-gradient-to-r from-green-500 via-yellow-500 to-red-600'
                     >
                         {children}
                         <p className='absolute -right-60 -top-1 text-lg'>
