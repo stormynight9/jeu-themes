@@ -58,7 +58,7 @@ const HighTemperature = () => {
         setPercentage((values[0] - 1850) / 2)
     }, [values])
     return (
-        <div className='relative  h-full overflow-hidden bg-gradient-to-b from-sky-600 to-[#b6fdff]'>
+        <div className='relative h-full overflow-hidden bg-gradient-to-b from-sky-600 to-[#b6fdff]'>
             <div
                 className='absolute rounded-full bg-yellow-400  opacity-25 blur-3xl'
                 style={{
@@ -99,7 +99,7 @@ const HighTemperature = () => {
             <p className='mx-auto mb-2 max-w-2xl text-center text-8xl font-bold tracking-[-0.01em] text-sky-950'>
                 {values[0]}
             </p>
-            <div className='mx-auto mt-48 max-w-3xl'>
+            <div className='mx-auto mt-12 max-w-3xl'>
                 {DATA.map((data) => {
                     if (
                         values[0] >= data.prevYear &&
